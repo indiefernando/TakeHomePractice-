@@ -78,4 +78,19 @@ class ClientTest {
 
 		assertFalse(Client.allEven(list));
 	}
+	
+	@Test
+	void allEven__null_list__returns_false() {
+		ArrayList<Integer> nullList = null;
+		boolean actualResult = Client.allEven(nullList);
+		assertFalse(actualResult);
+	}
+	
+	@Test
+	void allEven__empty_list__returns_true() {
+		ArrayList<Integer> emptyList = new ArrayList<>();
+		boolean actualResult = Client.allEven(emptyList);
+		assertTrue(actualResult);
+	}
+	
 }
